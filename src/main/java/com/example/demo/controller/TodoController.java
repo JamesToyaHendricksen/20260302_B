@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+﻿package com.example.demo.controller;
 
 import java.util.List;
 
@@ -19,6 +19,16 @@ public class TodoController {
                 new TodoItemView(3L, "Controllerの実装", "未完了"));
         model.addAttribute("todoList", todoList);
         return "todo/list";
+    }
+
+    @GetMapping("/new")
+    public String showNewForm() {
+        return "todo/new";
+    }
+
+    @GetMapping("/confirm")
+    public String showConfirm() {
+        return "todo/confirm";
     }
 
     public record TodoItemView(Long id, String title, String status) {
