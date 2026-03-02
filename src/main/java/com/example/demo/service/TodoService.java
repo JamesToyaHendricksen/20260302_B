@@ -19,6 +19,10 @@ public class TodoService {
         return todoMapper.findAll();
     }
 
+    public Todo findById(Long id) {
+        return todoMapper.findById(id);
+    }
+
     public void insert(Todo todo) {
         todoMapper.insert(todo);
     }
