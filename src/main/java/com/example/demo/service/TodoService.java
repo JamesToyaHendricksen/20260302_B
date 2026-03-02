@@ -23,7 +23,7 @@ public class TodoService {
         todoMapper.insert(todo);
     }
 
-    public void deleteById(Long id) {
-        todoMapper.deleteById(id);
+    public int deleteById(Long id) {
+        return todoMapper.deleteById(id);
     }
 }
